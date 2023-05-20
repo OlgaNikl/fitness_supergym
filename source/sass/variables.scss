@@ -10,6 +10,24 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
 
+$color-sapphir:                     #102654; //text
+$color-sapphir-middle:              rgba(16, 38, 84, 0.89); //bg coach card
+$color-sapphir-light:               rgba(16, 38, 84, 0.5);
+$color-egyptian-blue:               #103aae;
+$color-dark-cerulean:               #003d85; //bg header gradient
+$color-venetian-red:                #b80027; //bg header gradient
+$color-ghost-white:                 #f8f9fc; //bg membership
+$color-crimson:                     #d10a42; //frame/button/adv gradient
+$color-smalt:                       #00359f; //frame/button gradient
+$color-cobalt:                      #0041ca; // adv gradient
+$color-torch-red:                   #ed0233; //supergames, promotion
+$color-resolution-blue:             #1c3374; //advantages, review
+$color-persian-blue:                #2e35ac; // adv letters
+$color-black-russian:               #030a1a; // bg footer
+
+
+
+
 $color-neon-blue:                   #2c39f2;
 $color-torch-red:                   #ff1553;
 
@@ -26,6 +44,9 @@ $fz-default:                        16px;
 // у некоторых шрифтов в ios возникают проблемы с символом рубля
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
 $ff-rouble:                         "Rouble", "Arial", sans-serif;
+
+$ff-default:                        "Roboto Condensed", "Arial", sans-serif;
+$ff-title:                          "Alumni Sans", "Arial", sans-serif;
 
 $ff-placeholder:                    "Placeholder", "Arial", sans-serif;
 
@@ -44,12 +65,9 @@ $trans-600:                         0.6s $tf-default;
 // ---------------------------------
 
 $vp-320:                            320px;
-$vp-375:                            375px;
 $vp-768:                            768px;
-$vp-1024:                           1024px;
-$vp-1280:                           1280px;
-$vp-1440:                           1440px;
-$vp-1920:                           1920px;
+$vp-1200:                           1200px;
+
 
 // Retina
 // ---------------------------------
