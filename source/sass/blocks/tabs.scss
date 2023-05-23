@@ -1,0 +1,95 @@
+.tabs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.tabs__wrapper {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.tabs__element {
+  width: 100%;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+}
+
+.tabs__element .for-load {
+  position: static;
+  visibility: visible;
+  opacity: 1;
+  transition: none;
+}
+
+.tabs__element .is-active {
+  z-index: 1;
+  visibility: visible;
+  opacity: 1;
+}
+
+.tabs__buttons {
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 38px;
+  position: relative;
+  gap: 45px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: $color-grey-light;
+  }
+}
+
+.tabs__button {
+  border: none;
+  font-family: $ff-default;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: $color-sapphir-light;
+  background-color: transparent;
+  padding: 12px 1px 12px;
+  position: relative;
+  cursor: pointer;
+
+  @include vp-1199 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  // active  красный
+  &.is-active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: $color-crimson;
+  }
+
+  &.is-active {
+    color: $color-sapphir;
+    pointer-events: none;
+  }
+}
+
+

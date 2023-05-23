@@ -57,61 +57,250 @@
       </div>
 
       <main>
+        <section class="about-gym">
+          <div class="container">
+            <div class="about-gym__wrapper">
+              <div class="about-gym__content">
+                <h2>Тренажерный зал</h2>
+                <b>Просторный зал площадью 900&nbsp;кв/м</b>
+                <p>Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела и&nbsp;здоровья.
+                  Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.
+                </p>
+                <p>
+                  В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;кардио-зона с&nbsp;40&nbsp;тренажерами. Также в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.
+                </p>
+              </div>
+              <div class="about-gym__image-wrapper">
+                <div class="about-gym__image">
+                  <picture>
+                    <source type="image/webp" media="(max-width:767px)" srcset="img/gym-mobile.webp 1x, img/gym-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width:1199px)" srcset="img/gym-tablet.webp 1x, img/gym-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/gym-desktop.webp 1x, img/gym-desktop@2x.webp 2x">
+                    <source media="(max-width:767px)" srcset="img/gym-mobile.jpg 1x, img/gym-mobile@2x.jpg 2x">
+                    <source media="(max-width:1199px)" srcset="img/gym-tablet.jpg 1x, img/gym-tablet@2x.jpg 2x">
+                    <img src="img/gym-desktop.jpg" srcset="img/gym-desktop@2x.jpg 2x" width="660" height="401" alt="Тренажерный зал со светлыми стенами, справа зона кардиотренажеров, слева зона весов." >
+                  </picture>
+                </div>
+              </div>
+              <div class="about-gym__video-wrapper video">
+                <a class="video__link" href="https://www.youtube.com/watch?v=9TZXsZItgdw" aria-label="Видео-обзор тренажерного зала.">
+                  <picture>
+                    <source type="image/webp" media="(max-width:767px)" srcset="img/video-mobile.webp 1x, img/ideo-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width:1199px)" srcset="img/video-tablet.webp 1x, img/video-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/video-desktop.webp 1x, img/video-desktop@2x.webp 2x">
+                    <source media="(max-width:767px)" srcset="img/video-mobile.jpg 1x, img/video-mobile@2x.jpg 2x">
+                    <source media="(max-width:1199px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
+                    <img class="video__cover" src="img/video-desktop.jpg" srcset="img/video-desktop@2x.jpg 2x" width="364" height="228" alt="Тренажерный зал.">
+                  </picture>
+                </a>
+                <button class="video__button btn" type="button" aria-label="Смотреть видео."></button>
+                <div class="video__iframe" data-video-container data-src="https://www.youtube.com/embed/9TZXsZItgdw?autoplay=1"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="membership">
+          <div class="container">
+            <div class="membership__wrapper">
+              <h2>Абонементы</h2>
+
+              <div class="membership__tabs tabs no-transition-global" data-tabs="parent" data-height="max">
+                <div class="tabs__buttons" data-tabs="controls">
+                  <button class="tabs__button is-active" type="button" data-tabs="control">1 месяц</button>
+                  <button class="tabs__button" type="button" data-tabs="control">6 месяцев</button>
+                  <button class="tabs__button" type="button" data-tabs="control">12 месяцев</button>
+                </div>
+                <div class="tabs__wrapper" data-tabs="content">
+                  <!-- 1 -->
+                  <div class="tabs__element is-active for-load" data-tabs="element">
+                    <ul class="membership__list">
+                      <li class="membership__item">
+                        <div class="membership__item-content">
+                          <dl>
+                            <dt class="visually-hidden">Вид абонемента</dt>
+                            <dd>С тренером</dd>
+                            <dt class="visually-hidden">Расписание</dt>
+                            <dd>12 занятий</dd>
+                            <dt class="visually-hidden">Стоимость</dt>
+                            <dd>5000 ₽</dd>
+                          </dl>
+                          <a class="membership__button btn" href="#">купить абонемент</a>
+                        </div>
+                      </li>
+                      <li class="membership__item">
+                        <div class="membership__item-content">
+                          <dl>
+                            <dt class="visually-hidden">Вид абонемента</dt>
+                            <dd>Дневной</dd>
+                            <dt class="visually-hidden">Расписание</dt>
+                            <dd>с 8:00 до 17:00</dd>
+                            <dt class="visually-hidden">Стоимость</dt>
+                            <dd>1700 ₽</dd>
+                          </dl>
+                          <a class="membership__button btn" href="#">купить абонемент</a>
+                        </div>
+                      </li>
+                      <li class="membership__item">
+                        <div class="membership__item-content">
+                          <dl>
+                            <dt class="visually-hidden">Вид абонемента</dt>
+                            <dd>Полный день</dd>
+                            <dt class="visually-hidden">Расписание</dt>
+                            <dd>с 8:00 до 22:00 </dd>
+                            <dt class="visually-hidden">Стоимость</dt>
+                            <dd>2700 ₽</dd>
+                          </dl>
+                          <a class="membership__button btn" href="#">купить абонемент</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- 2 -->
+                  <div class="tabs__element" data-tabs="element">
+                    <ul class="membership__list">
+                      <li class="membership__item">
+                        <div class="membership__item-content">
+                          <dl>
+                            <dt class="visually-hidden">Вид абонемента</dt>
+                            <dd>С тренером</dd>
+                            <dt class="visually-hidden">Расписание</dt>
+                            <dd>12 занятий</dd>
+                            <dt class="visually-hidden">Стоимость</dt>
+                            <dd>28000 ₽</dd>
+                          </dl>
+                          <a class="membership__button btn" href="#">купить абонемент</a>
+                        </div>
+                      </li>
+                      <li class="membership__item">
+                        <div class="membership__item-content">
+                          <dl>
+                            <dt class="visually-hidden">Вид абонемента</dt>
+                            <dd>Дневной</dd>
+                            <dt class="visually-hidden">Расписание</dt>
+                            <dd>с 8:00 до 17:00</dd>
+                            <dt class="visually-hidden">Стоимость</dt>
+                            <dd>9000 ₽</dd>
+                          </dl>
+                          <a class="membership__button btn" href="#">купить абонемент</a>
+                        </div>
+                      </li>
+                      <li class="membership__item">
+                        <div class="membership__item-content">
+                          <dl>
+                            <dt class="visually-hidden">Вид абонемента</dt>
+                            <dd>Полный день</dd>
+                            <dt class="visually-hidden">Расписание</dt>
+                            <dd>с 8:00 до 22:00 </dd>
+                            <dt class="visually-hidden">Стоимость</dt>
+                            <dd>16000 ₽</dd>
+                          </dl>
+                          <a class="membership__button btn" href="#">купить абонемент</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- 3 -->
+                  <div class="tabs__element" data-tabs="element">
+                    <ul class="membership__list">
+                      <li class="membership__item">
+                        <div class="membership__item-content">
+                          <dl>
+                            <dt class="visually-hidden">Вид абонемента</dt>
+                            <dd>С тренером</dd>
+                            <dt class="visually-hidden">Расписание</dt>
+                            <dd>12 занятий</dd>
+                            <dt class="visually-hidden">Стоимость</dt>
+                            <dd>55000 ₽</dd>
+                          </dl>
+                          <a class="membership__button btn" href="#">купить абонемент</a>
+                        </div>
+                      </li>
+                      <li class="membership__item">
+                        <div class="membership__item-content">
+                          <dl>
+                            <dt class="visually-hidden">Вид абонемента</dt>
+                            <dd>Дневной</dd>
+                            <dt class="visually-hidden">Расписание</dt>
+                            <dd>с 8:00 до 17:00</dd>
+                            <dt class="visually-hidden">Стоимость</dt>
+                            <dd>18000 ₽</dd>
+                          </dl>
+                          <a class="membership__button btn" href="#">купить абонемент</a>
+                        </div>
+                      </li>
+                      <li class="membership__item">
+                        <div class="membership__item-content">
+                          <dl>
+                            <dt class="visually-hidden">Вид абонемента</dt>
+                            <dd>Полный день</dd>
+                            <dt class="visually-hidden">Расписание</dt>
+                            <dd>12 занятий</dd>
+                            <dt class="visually-hidden">Стоимость</dt>
+                            <dd>32000 ₽</dd>
+                          </dl>
+                          <a class="membership__button btn" href="#">купить абонемент</a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
       </main>
 
       <footer class="footer">
         <h2 class="visually-hidden">Навигация по сайту и социальные сети.</h2>
-        <div class="container">
-          <div class="footer__wrapper">
-            <a class="footer__logo" href="index.html" aria-label="Перейти на главную.">
-              <svg class="footer__logo-image" width="88" height="32">
-                <use xlink:href="img/sprite.svg#logo"></use>
-              </svg>
-            </a>
-            <ul class="footer__menu">
-              <li class="footer__item">
-                <a class="footer__link">Услуги</a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link">Абонементы</a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link">Акции</a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link">Тренеры</a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link">Расписание</a>
-              </li>
-            </ul>
-            <ul class="footer__social-list">
-              <li class="footer__social-item">
-                <a class="footer__social-link" href="#" aria-label="VK">
-                  <svg class="footer__social-icon footer__social-icon--vk" width="" height="20">
-                    <use xlink:href="img/sprite.svg#vk"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="footer__social-item">
-                <a class="footer__social-link" href="#" aria-label="Одноклассники">
-                  <svg class="footer__social-icon footer__social-icon--ok" width="11.75" height="20">
-                    <use xlink:href="img/sprite.svg#ok"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="footer__social-item">
-                <a class="footer__social-link" href="#" aria-label="Reddit">
-                  <svg class="footer__social-icon footer__social-icon--reddit" width="20" height="20">
-                    <use xlink:href="img/sprite.svg#reddit"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
+        <div class="footer__wrapper">
+          <a class="footer__logo" href="index.html" aria-label="Перейти на главную.">
+            <svg class="footer__logo-image" width="88" height="32">
+              <use xlink:href="img/sprite.svg#logo"></use>
+            </svg>
+          </a>
+          <ul class="footer__menu">
+            <li class="footer__item">
+              <a class="footer__link">Услуги</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link">Абонементы</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link">Акции</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link">Тренеры</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link">Расписание</a>
+            </li>
+          </ul>
+          <ul class="footer__social-list">
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#" aria-label="VK">
+                <svg class="footer__social-icon footer__social-icon--vk" width="13" height="9">
+                  <use xlink:href="img/sprite.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#" aria-label="Одноклассники">
+                <svg class="footer__social-icon footer__social-icon--ok" width="9" height="16">
+                  <use xlink:href="img/sprite.svg#ok"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="#" aria-label="Reddit">
+                <svg class="footer__social-icon footer__social-icon--reddit" width="14" height="14">
+                  <use xlink:href="img/sprite.svg#reddit"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
-
       </footer>
     </div>
 

@@ -3,12 +3,13 @@
   justify-content: center;
   padding: 10px 20px;
   user-select: none;
+  cursor: pointer;
 
   // color: $color-default-white;
 
   // background-color: $color-neon-blue;
   // border: none;
-  cursor: pointer;
+
 
   transition: opacity $trans-default;
 
