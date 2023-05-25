@@ -5,20 +5,42 @@
 
 .membership__wrapper::after {
   content: "";
-  width: 290px;
-  height: 400px;
+  width: 288px;
+  height: 430px;
   background-image: url("../../img/weigth-desktop.png");
   background-repeat: no-repeat;
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: -86px;
   // z-index: 3;
+
+  @include vp-1199 {
+    background-image: url("../../img/weigth-tablet.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 347px;
+    height: 320px;
+    right: 0;
+    bottom: 0px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
 }
 
 .membership__wrapper {
   display: flex;
   flex-direction: column;
   padding: 120px 0;
+
+  @include vp-1199 {
+    padding: 100px 118px;
+  }
+
+  @include vp-767 {
+    padding: 65px 0;
+  }
 
   & h2 {
     font-family: $ff-title;
@@ -30,6 +52,18 @@
     margin: 0;
     margin-bottom: 6px;
     text-align: center;
+
+    @include vp-1199 {
+      font-size: 42px;
+      line-height: 50px;
+      margin-left: -11px;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+      line-height: 38px;
+      margin-left: -10px;  // а еще как?
+    }
   }
 }
 
@@ -44,6 +78,12 @@
 
   @include vp-1199 {
     grid-template-columns: 1fr;
+    align-items: center;
+  }
+
+  @include vp-767 {
+    gap: 35px;
+    max-width: 400px;
   }
 }
 
@@ -51,6 +91,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   padding: 57px 50px 59px;
   width: 100%;
   min-height: 448px;
@@ -58,10 +99,25 @@
   border: 7px solid transparent;
   box-sizing: border-box;
 
+  // @include vp-1199 {
+  //   max-width: 400;
+  // }
+
+  @include vp-767 {
+    max-width: 400px;
+    width: 100%;
+    min-height: 384px;
+    aspect-ratio: 290 / 384;
+    padding: 43px 0 48px;
+    align-items: center;
+  }
+
   & dl {
     display: flex;
     flex-direction: column;
     margin: 0;
+    width: 100%;
+
   }
 
   & dd {
@@ -77,6 +133,13 @@
     line-height: 29px;
     color: $color-sapphir;
     margin-bottom: 10px;
+
+
+
+    @include vp-767 {
+      font-size: 22px;
+      line-height: 24px;
+    }
   }
 
   & dd:last-of-type {
@@ -86,10 +149,59 @@
     line-height: 90px;
     color: $color-egyptian-blue;
     margin-top: 65px;
+    position: relative;
+    z-index: 1;
+
+    @include vp-1199 {
+      margin-left: 5px;
+    }
+
+    @include vp-767 {
+      font-size: 48px;
+      line-height: 72px;
+      margin-top: 55px;
+    }
+
+    &::before {
+      content: attr(data-price-shadow);
+      position: absolute;
+      top: 23%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: $ff-default;
+      font-weight: 700;
+      font-size: 100px;
+      line-height: 150px;
+      color: $color-whisper;
+      // opacity: 0.48;   // ВЕРНУТЬ!!!! //
+      z-index: -1;
+      display: block;
+      width: auto;
+
+      @include vp-767 {
+        font-size: 80px;
+        line-height: 120px;
+      }
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 30px;
+      height: 42px;
+      background-image: url("data:image/svg+xml,%3Csvg width='30' height='42' viewBox='0 0 30 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M18.5 6H10v11h8.5a5.5 5.5 0 1 0 0-11ZM4 0v23h14.5C24.851 23 30 17.851 30 11.5S24.851 0 18.5 0H4Z' fill='%23102654'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 17h6v6H0v-6Z' fill='%23102654'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.659 28.321V18h6v10.321H21v6H9.659V42h-6v-7.679H0v-6h3.659Z' fill='%23102654'/%3E%3C/svg%3E");
+      margin-left: 15px;
+
+      @include vp-767 {
+        width: 24px;
+        height: 33px;
+        margin-left: 10px;
+      }
+
+    }
   }
 
   @include hover {
-    // margin: -7px 0 -7px;
     border: 7px solid $color-smalt;
     border-image: linear-gradient(to top left, $color-smalt, $color-crimson);
     border-image-slice: 1;
@@ -117,6 +229,12 @@
   border: 2px solid $color-sapphir;
   align-self: center;
   padding: 24px 20px;
+
+  @include vp-767 {
+    padding: 23px 20px;
+  }
+
+
 
   // & .is-active {
   //   color: $color-default-white;

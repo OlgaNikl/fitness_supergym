@@ -37,11 +37,25 @@
 
 .tabs__buttons {
   display: flex;
+  flex-wrap: wrap;
   width: fit-content;
   margin: 0 auto;
   margin-bottom: 38px;
   position: relative;
   gap: 45px;
+
+  @include vp-1199 {
+    gap: 54px;
+    margin-bottom: 44px;
+  }
+
+  @include vp-767 {
+    gap: 40px;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 35px;
+    width: 100%;
+  }
 
   &::after {
     content: "";
@@ -68,11 +82,13 @@
   @include vp-1199 {
     font-size: 18px;
     line-height: 27px;
+    padding: 13px 0 15px;
   }
 
   @include vp-767 {
     font-size: 16px;
     line-height: 24px;
+    padding: 13px 2px 15px 0;
   }
 
   // active  красный
