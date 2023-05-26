@@ -21,7 +21,7 @@
     width: 347px;
     height: 320px;
     right: 0;
-    bottom: 0px;
+    bottom: 0;
   }
 
   @include vp-767 {
@@ -62,7 +62,7 @@
     @include vp-767 {
       font-size: 32px;
       line-height: 38px;
-      margin-left: -10px;  // а еще как?
+      margin-left: -10px;
     }
   }
 }
@@ -74,11 +74,11 @@
   display: grid;
   gap: 40px;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1;
+  // grid-template-rows: 1;
 
   @include vp-1199 {
     grid-template-columns: 1fr;
-    align-items: center;
+    align-self: center;
   }
 
   @include vp-767 {
@@ -117,7 +117,6 @@
     flex-direction: column;
     margin: 0;
     width: 100%;
-
   }
 
   & dd {
@@ -133,8 +132,6 @@
     line-height: 29px;
     color: $color-sapphir;
     margin-bottom: 10px;
-
-
 
     @include vp-767 {
       font-size: 22px;
@@ -197,7 +194,6 @@
         height: 33px;
         margin-left: 10px;
       }
-
     }
   }
 
@@ -233,8 +229,6 @@
   @include vp-767 {
     padding: 23px 20px;
   }
-
-
 
   // & .is-active {
   //   color: $color-default-white;

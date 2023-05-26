@@ -2,8 +2,9 @@
   background-color: $color-venetian-red;
   background-repeat: no-repeat;
   background-size: cover;
-  background: conic-gradient(from 150.87deg at 16.03% 39.06%,
-    $color-venetian-red -46.69deg, $color-dark-cerulean 32.24deg,
-    $color-venetian-red 313.31deg, $color-dark-cerulean 392.24deg);
+  background-image: conic-gradient(from 150.87deg at 16.03% 39.06%,
+    $color-venetian-red -46.69deg,
+    $color-dark-cerulean 32.24deg,
+    $color-venetian-red 313.31deg,
+    $color-dark-cerulean 392.24deg);
 }
-

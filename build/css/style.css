@@ -1422,8 +1422,6 @@ button,
   -ms-grid-row-span: 3;
   -ms-grid-column: 1;
   grid-area: services;
-  -ms-grid-row: 2;
-  grid-row: 2;
   -ms-grid-row-align: center;
       align-self: center;
   list-style-type: none;
@@ -1547,7 +1545,7 @@ button,
   background-color: #b80027;
   background-repeat: no-repeat;
   background-size: cover;
-  background: conic-gradient(from 150.87deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
+  background-image: conic-gradient(from 150.87deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
 }
 
 .footer {
@@ -1993,7 +1991,7 @@ button,
     width: 347px;
     height: 320px;
     right: 0;
-    bottom: 0px;
+    bottom: 0;
   }
 }
 @media (max-width: 767px) {
@@ -2057,16 +2055,13 @@ button,
   gap: 40px;
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: 1;
-  grid-template-rows: 1;
 }
 @media (max-width: 1199px) {
   .membership__list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-grid-row-align: center;
+        align-self: center;
   }
 }
 @media (max-width: 767px) {
@@ -2663,6 +2658,71 @@ button,
   .promotion__image img {
     aspect-ratio: 290/292;
   }
+}
+
+.coaches {
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+  background-color: #f8f9fc;
+}
+@media (max-width: 1199px) {
+  .coaches {
+    font-size: 42px;
+    line-height: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .coaches {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.coaches__wrapper {
+  padding: 0 47px 140px;
+}
+@media (max-width: 1199px) {
+  .coaches__wrapper {
+    padding: 0 45px 100px;
+  }
+}
+@media (max-width: 767px) {
+  .coaches__wrapper {
+    padding: 0 15px 70px;
+  }
+}
+.coaches__wrapper h2 {
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+  color: #102654;
+  margin: 0;
+  margin-bottom: 45px;
+}
+
+.coaches__slider {
+  width: 1160px;
+}
+
+.coaches__slider-wrapper {
+  list-style-type: none;
+}
+
+.coaches__button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.coach-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 /* @mixin hover-focus {
