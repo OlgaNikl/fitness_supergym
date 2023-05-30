@@ -3,21 +3,11 @@
   max-width: 1366px;
   margin: 0 auto;
   background-color: $color-ghost-white;
-
-  @include vp-1199 {
-    font-size: 42px;
-    line-height: 50px;
-  }
-
-  @include vp-767  {
-    font-size: 32px;
-    line-height: 38px;
-  }
-
 }
 
 .coaches__wrapper {
   padding: 0 47px 140px;
+  position: relative;
 
   @include vp-1199 {
     padding: 0 45px 100px;
@@ -35,20 +25,105 @@
     letter-spacing: 0.03em;
     color: $color-sapphir;
     margin: 0;
-    margin-bottom: 45px;
+    margin-left: 56px;
+    margin-bottom: 47px;
+
+    @include vp-1199 {
+      font-size: 42px;
+      line-height: 50px;
+      margin: 0 auto 31px;
+      text-align: center;
+    }
+
+    @include vp-767  {
+      font-size: 32px;
+      line-height: 38px;
+      margin-bottom: 42px;
+    }
+  }
+}
+
+.coaches__slider-container {
+  width: 100%;
+  position: relative;
+  padding: 0 56px;
+
+  @include vp-767 {
+    padding: 0 31px;
   }
 }
 
 .coaches__slider {
-  width: 1160px;
+  width: 100%;
+
+  @include vp-1199 {
+    max-width: 678px;
+  }
+
+  @include vp-767 {
+    max-width: 400px;
+  }
 }
 
 .coaches__slider-wrapper {
+  height: 100%;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.coaches__slide {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  aspect-ratio: 260 / 294;
+
+
+  @include vp-1199 {
+    aspect-ratio: 268 / 294;
+  }
+
+  @include vp-767 {
+    aspect-ratio: 226 / 274;
+  }
 }
 
 .coaches__button {
+  position: absolute;
+  transform: translate(-50%);
+  z-index: 50;
+  display: block;
+  width: 23px;
+  height: 44px;
+  padding: 0 5px;
   border: none;
   background-color: transparent;
   cursor: pointer;
+
+  svg {
+    width: 18px;
+    height: 34px;
+    fill: none;
+
+    @include vp-767 {
+      width: 10px;
+      height: 19px;
+    }
+  }
+
+  &--prev {
+    top: 51%;
+    left: 4px;
+  }
+
+  &--next {
+    top: 49%;
+    right: -4px;
+    transform: rotate(180deg);
+  }
+
+  &::after {
+    display: none;
+  }
 }

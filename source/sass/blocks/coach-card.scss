@@ -4,4 +4,149 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  // background-color: $color-sapphir-middle;
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    .coach-card__content {
+      opacity: 100%;
+    }
+    .coach-card__title {
+      opacity: 0;
+    }
+  }
+}
+
+.coach-card__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.coach-card__title {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 25px 30px;
+
+  h3 {
+    font-family: $ff-default;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    color: $color-default-white;
+    margin: 0;
+    // text-align: center;
+  }
+}
+
+//внутренний контент
+.coach-card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 50px 40px 20px 55px;
+  z-index: 5;
+  background-color: $color-sapphir-middle;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  aspect-ratio: 260 / 294;;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  transition: opacity $trans-default;
+
+
+  @include vp-1199 {
+    aspect-ratio: 268 / 294;
+    padding: 50px 40px 40px 55px;
+  }
+
+  @include vp-767 {
+    aspect-ratio: 226 / 274;
+    padding: 40px 25px 16px 35px;
+  }
+
+  & h4 {
+    font-family: $ff-default;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    color: $color-default-white;
+    margin: 0;
+    margin-left: -15px;
+    text-align: center;
+
+    @include vp-1199 {
+      margin-left: -18px;
+    }
+  }
+
+  & p {
+    font-family: $ff-default;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    color: $color-spindle;
+    text-align: center;
+    margin-left: -13px;
+    margin-bottom: 30px;
+
+    @include vp-1199 {
+      margin-left: -20px;
+    }
+
+    @include vp-767 {
+      margin-left: -10px;
+    }
+  }
+
+  & ul {
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    justify-self: flex-end;
+    list-style-type: none;
+  }
+
+  & li {
+    font-family: $ff-default;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: $color-default-white;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: $color-default-white;
+      position: absolute;
+      left: -16px;
+      top: 6px;
+    }
+  }
 }
