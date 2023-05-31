@@ -101,6 +101,19 @@
   background-color: transparent;
   cursor: pointer;
 
+  @include hover-focus {
+    opacity: 0.8;
+  }
+
+  @include active {
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
   svg {
     width: 18px;
     height: 34px;

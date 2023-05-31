@@ -14,6 +14,18 @@
 
 .header__logo {
   display: block;
+
+  @include hover-focus {
+    .header__logo-image {
+      opacity: 0.8;
+    }
+  }
+
+  @include active {
+    .header__logo-image {
+      opacity: 0.3;
+    }
+  }
 }
 
 .header__logo-image {

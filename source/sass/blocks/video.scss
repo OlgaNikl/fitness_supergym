@@ -4,9 +4,6 @@
   position: absolute;
   top: 408px;
   left: 540px;
-  // left: 50%;
-  // transform: translate(-50%, -50%);
-  // transform: translateX(-50%);
 
   & iframe {
     border: none;
@@ -27,9 +24,6 @@
   }
 
   @include vp-767 {
-    // top: 668px;
-    // left: 50%;
-    // transform: translateX(-50%);
     width: 100vw;
     height: 100%;
     aspect-ratio: 320 / 167;
@@ -52,7 +46,6 @@
   aspect-ratio: 320 / 167;
 
   & img {
-    // display: block;
     width: 100%;
     height: 100%;
 
