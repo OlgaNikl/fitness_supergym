@@ -7,7 +7,7 @@
   content: "";
   width: 288px;
   height: 430px;
-  background-image: url("../../img/weigth-desktop.png");
+  background-image: url("../img/weigth-desktop.png");
   background-repeat: no-repeat;
   position: absolute;
   right: 0;
@@ -15,13 +15,13 @@
 
 
   @include vp-1199 {
-    background-image: url("../../img/weigth-tablet.png");
+    background-image: url("../img/weigth-tablet.png");
     background-repeat: no-repeat;
     position: absolute;
     width: 347px;
     height: 400px;
     right: 0;
-    bottom: -30px;
+    bottom: -80px;
   }
 
   @include vp-767 {
@@ -35,7 +35,7 @@
   padding: 120px 0;
 
   @include vp-1199 {
-    padding: 100px 118px 150px;
+    padding: 100px 118px 100px;
   }
 
   @include vp-767 {

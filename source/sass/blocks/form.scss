@@ -24,10 +24,10 @@
       @include hover-focus {
         background-color: $color-sapphir-light;
       }
-    }
 
-    &::placeholder {
-      color: rgba($color-default-white, 0.7);
+      &::placeholder {
+        color: $color-default-white;
+      }
     }
 
     .input-message {

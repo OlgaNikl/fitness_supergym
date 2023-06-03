@@ -1,18 +1,3 @@
-// import Swiper, {Navigation} from '../vendor/swiper';
-// Swiper.use([Navigation]);
-
-// const initSwiper = new Swiper ()
-
-// const swiper = new Swiper('.swiper', {
-//   // Optional parameters
-//   loop: true,
-
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-// });
 const swiperTeam = document.querySelector('.coaches__slider');
 
 const initSwiperTeam = () => {
@@ -26,7 +11,6 @@ const initSwiperTeam = () => {
           nextEl: '.coaches__button--next',
           prevEl: '.coaches__button--prev',
         },
-
         breakpoints: {
           320: {
             slidesPerView: 1,

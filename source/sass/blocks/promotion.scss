@@ -1,15 +1,15 @@
 .promotion {
-  background-color: $color-ghost-white;
+  background-color: $color-default-white;
 }
 
 .promotion__wrapper {
   padding: 120px 0 106px;
   display: grid;
-  grid-template-columns: 1fr 660px;
+  grid-template-columns: 1fr 1.32fr;
 
   @include vp-1199 {
     grid-template-columns: 1fr 386px;
-    padding: 50px 0 100px;
+    padding: 100px 0 100px;
   }
 
   @include vp-767 {
@@ -167,9 +167,12 @@
 
 .promotion__image {
   position: relative;
+  flex-grow: 1;
+  flex-shrink: 1;
+  align-self: stretch;
 
   @include vp-767 {
-    height: 292px;
+    aspect-ratio: 290 / 292;
   }
 
   & img {
@@ -179,9 +182,5 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
-
-    @include vp-767 {
-      aspect-ratio: 290 / 292;
-    }
   }
 }

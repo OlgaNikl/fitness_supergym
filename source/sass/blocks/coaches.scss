@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 1366px;
   margin: 0 auto;
-  background-color: $color-ghost-white;
+  background-color: $color-default-white;
 }
 
 .coaches__wrapper {
@@ -87,6 +87,18 @@
   @include vp-767 {
     aspect-ratio: 226 / 274;
   }
+
+  // &:hover,
+  // &:focus,
+  // &:focus-within {
+  //   .coach-card__content {
+  //     opacity: 100%;
+  //   }
+
+  //   .coach-card__title {
+  //     opacity: 0;
+  //   }
+  // }
 }
 
 .coaches__button {

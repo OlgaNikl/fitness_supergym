@@ -1,7 +1,9 @@
 .about-gym {
   position: relative;
-  background-color: $color-ghost-white;
+  background-color: $color-default-white;
   width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
 }
 
 .about-gym__wrapper {

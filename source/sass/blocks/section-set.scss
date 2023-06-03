@@ -1,0 +1,27 @@
+.section-set {
+  width: 100%;
+  background-image: linear-gradient(to right, $color-sapphir 50%, $color-default-white 50%);
+  border-top: 1px solid;
+  border-image: linear-gradient(to right, $color-sapphir 50%, $color-light-slate-grey 50%);
+  border-image-slice: 1;
+
+  @include vp-1199 {
+    border-top: none;
+    background-image: none;
+    border-image: none;
+  }
+}
+
+.section-set__wrapper {
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+  background-color: $color-default-white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+}

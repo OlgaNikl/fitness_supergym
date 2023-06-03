@@ -17,7 +17,6 @@ const createIframe = (block) => {
   }
 };
 
-
 export const initPlayVideo = () => {
   link.removeAttribute('href');
   playButton.addEventListener('click', () => {

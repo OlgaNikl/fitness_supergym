@@ -3,6 +3,7 @@ import {Form} from './modules/form-validate/form';
 import {initTabs} from './modules/tabs/init-tabs';
 import {initPlayVideo} from './modules/video/video';
 import {initSwiperTeam, initSwiperReviews} from './modules/swiper/init-swiper';
+import {initSmoothScroll} from './modules/smooth-scroll/init-smooth-scroll';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -19,6 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initPlayVideo();
+    initSmoothScroll();
     initTabs();
     initSwiperTeam();
     initSwiperReviews();
