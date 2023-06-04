@@ -6,6 +6,15 @@
   height: 100%;
   overflow: hidden;
   background-color: $color-sapphir-middle;
+  aspect-ratio: 260 / 294;
+
+  @include vp-1199 {
+    aspect-ratio: 268 / 294;
+  }
+
+  @include vp-767 {
+    aspect-ratio: 226 / 274;
+  }
 
   &:hover,
   &:focus,

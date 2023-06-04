@@ -10,14 +10,14 @@
 }
 
 .advantages__wrapper {
-  padding: 97px 62px 135px;
+  padding: 97px 62px 120px;
 
   @include vp-1199 {
-    padding: 90px 0 86px;
+    padding: 90px 0 80px;
   }
 
   @include vp-767 {
-    padding: 60px 0 30px;
+    padding: 60px 0 66px;
   }
 
   & h2 {
@@ -47,18 +47,17 @@
 }
 
 .advantages__list {
-  position: relative;
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 240px 1fr;
   column-gap: 60px;
-  row-gap: 122px;
   grid-template-areas:
     "square equipment parking"
     "comfort equipment experience";
-  justify-self: center;
+  row-gap: 122px;
+
 
   @include vp-1199 {
     grid-template-columns: 1fr 1fr;
@@ -66,7 +65,7 @@
       "square parking"
       "equipment equipment"
       "comfort experience";
-    row-gap: 45px;
+    row-gap: 32px;
     column-gap: 30px;
   }
 
@@ -79,13 +78,18 @@
       "comfort"
       "experience";
     width: 100%;
-    gap: 38px;
+    gap: 36px;
   }
+}
 
-  &::before,
+.advantages__item--square {
+  position: relative;
+  grid-area: square;
+
   &::after {
     position: absolute;
-    top: 49%;
+    left: 0;
+    bottom: -64px;
     content: "";
     width: 340px;
     height: 2px;
@@ -96,20 +100,7 @@
     }
   }
 
-  &::before {
-    left: 0;
-  }
-
-  &::after {
-    right: 0;
-  }
-}
-
-.advantages__item--square {
-  grid-area: square;
-
   .advantages__numbers {
-    margin-top: -28px;
     margin-left: 18px;
 
     @include vp-1199 {
@@ -124,11 +115,25 @@
 }
 
 .advantages__item--parking {
+  position: relative;
   grid-area: parking;
 
-  .advantages__numbers {
-    margin-top: -28px;
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: -64px;
+    content: "";
+    width: 340px;
+    height: 2px;
+    background-color: rgba($color-crimson, 0.2);
 
+    @include vp-1199 {
+      display: none;
+    }
+  }
+
+
+  .advantages__numbers {
     @include vp-1199 {
       margin-top: -20px;
     }
@@ -143,16 +148,16 @@
   grid-area: comfort;
 
   .advantages__numbers {
-    margin-top: 6px;
+    margin-top: 24px;
     margin-left: 18px;
 
     @include vp-1199 {
       margin-left: 0;
-      margin-top: -16px;
+      margin-top: -3px;
     }
 
     @include vp-767 {
-      margin-top: -10px;
+      margin-top: -7px;
     }
   }
 }
@@ -161,16 +166,16 @@
   grid-area: experience;
 
   .advantages__numbers {
-    margin-top: 5px;
+    margin-top: 24px;
     margin-left: 2px;
 
     @include vp-1199 {
       margin-left: 0;
-      margin-top: -16px;
+      margin-top: -3px;
     }
 
     @include vp-767 {
-      margin-top: -18px;
+      margin-top: -14px;
     }
   }
 }
@@ -187,15 +192,17 @@
 }
 
 .advantages__item--bottom {
-  align-items: center;
-
   .advantages__description {
-    margin-top: 26px;
+    margin-top: 16px;
     gap: 7px;
 
     @include vp-1199 {
-      margin-top: 0;
+      margin-top: 12px;
       gap: 0;
+    }
+
+    @include vp-767 {
+      margin-top: -2px;
     }
   }
 }
@@ -221,12 +228,34 @@
   justify-content: flex-start;
   position: relative;
 
+
   @include vp-767 {
     align-items: center;
   }
 
   & p {
+    display: block;
+    font-family: $ff-default;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: $color-persian-blue;
+    margin-top: -29px;
+
+    @include vp-1199 {
+      margin-top: 0;
+    }
+
+    @include vp-767 {
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+  & b {
+    display: block;
     margin: 0;
+    margin-bottom: -22px;
     font-family: $ff-default;
     font-style: normal;
     font-weight: 700;
@@ -238,23 +267,7 @@
 
     @include vp-1199 {
       font-size: 58px;
-    }
-  }
-
-  & span {
-    font-family: $ff-default;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    color: $color-persian-blue;
-    position: absolute;
-    bottom: 2px;
-    left: 0;
-
-    @include vp-767 {
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: -5px;
+      margin-bottom: -20px;
     }
   }
 }
@@ -262,6 +275,7 @@
 .advantages__description {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 
   @include vp-767 {
     align-items: center;
@@ -308,7 +322,7 @@
   padding: 38px 34px;
   text-align: center;
   max-width: 240px;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 
   @include vp-1199 {
     max-width: 442px;
@@ -318,8 +332,8 @@
 
   @include vp-767 {
     width: 100%;
-    padding: 20px 74px 45px;
-    margin-top: 5px;
+    padding: 20px 74px 40px;
+    margin-top: 10px;
   }
 
   & b {
@@ -337,7 +351,7 @@
     font-size: 26px;
     line-height: 150%;
     color: $color-default-white;
-    margin-top: -14px;
+    margin-top: -18px;
     margin-bottom: 34px;
 
     @include vp-1199 {
@@ -345,6 +359,11 @@
       line-height: 33px;
       margin-top: -20px;
       margin-bottom: 16px;
+    }
+
+    @include vp-767 {
+      margin-top: -22px;
+      margin-bottom: 8px;
     }
   }
 

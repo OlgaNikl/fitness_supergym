@@ -7,7 +7,7 @@
   padding: 17px 0 120px;
 
   @include vp-1199 {
-    padding: 0 0 100px;
+    padding: 20px 0 100px;
   }
 
   @include vp-767 {
@@ -81,12 +81,7 @@
   padding: 0;
   position: relative;
   min-height: 242px;
-  aspect-ratio: 560 / 242;
-  // overflow: hidden;
-
-  @include vp-1199 {
-    aspect-ratio: 566 / 242;
-  }
+  height: fit-content;
 
   @include vp-767 {
     min-height: 335px;
@@ -97,30 +92,26 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  // height: 100%;
-  // overflow: hidden;
+  height: 100%;
   background-color: $color-resolution-blue;
   box-shadow: 0 0 40px rgba($color-resolution-blue, 0.2);
 }
 
 .reviews__content {
-  padding: 55px 62px 62px 170px;
+  padding: 56px 60px 58px 170px;
   width: 100%;
-  // height: 100%;
-  max-height: fit-content;
-  // overflow-y: auto;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 12px;
-  // overflow: hidden;
 
   @include vp-1199 {
     padding: 56px 65px 56px 173px;
   }
 
   @include vp-767 {
-    padding: 50px 25px 25px;
+    padding: 50px 25px 35px;
     max-width: 380px;
     max-height: fit-content;
     align-items: center;
