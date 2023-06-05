@@ -30,8 +30,8 @@ const initSwiperTeam = () => {
         },
 
         on: {
-          inint() {
-            const duplicateSlides = swiperTeam.document.querySelectorAll('swiper-slide-duplicate');
+          init() {
+            const duplicateSlides = swiperTeam.querySelectorAll('.swiper-slide-duplicate');
             duplicateSlides.forEach((item) => {
               item.setAttribute('tabindex', '-1');
             });
