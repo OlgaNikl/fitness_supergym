@@ -2338,10 +2338,13 @@ button,
   -ms-grid-columns: 1fr 20%;
   grid-template-columns: 1fr 20%;
   min-height: 25px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 @media (max-width: 1199px) {
   .footer__wrapper {
-    padding: 36px 39px 36px 45px;
+    padding: 45px 39px 28px 45px;
     -ms-grid-columns: 1fr 15%;
     grid-template-columns: 1fr 15%;
   }
@@ -2369,6 +2372,9 @@ button,
   height: 34px;
   padding-top: 6px;
   display: block;
+  -ms-flex-item-align: self-start;
+      -ms-grid-row-align: self-start;
+      align-self: self-start;
 }
 @media (hover: hover) {
   .footer__logo:hover:not(.focus-visible) .footer__logo-image {
@@ -2460,12 +2466,9 @@ button,
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   gap: 40px;
   list-style-type: none;
   margin: 0;
@@ -2545,8 +2548,14 @@ button,
   min-height: 26px;
   min-width: 97px;
 }
+@media (max-width: 1199px) {
+  .footer__social-list {
+    padding: 0;
+  }
+}
 @media (max-width: 767px) {
   .footer__social-list {
+    padding: 8px 0;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -4955,7 +4964,7 @@ button,
 }
 @media (max-width: 1199px) {
   .contacts__wrapper {
-    padding: 60px 100px 56px 132px;
+    padding: 60px 100px 60px 132px;
   }
 }
 @media (max-width: 767px) {

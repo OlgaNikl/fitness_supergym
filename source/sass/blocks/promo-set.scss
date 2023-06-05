@@ -81,7 +81,7 @@
   position: relative;
   min-height: 462px;
 
-  @include vp-1199{
+  @include vp-1199 {
     grid-template-columns: 1fr 399px;
   }
 
